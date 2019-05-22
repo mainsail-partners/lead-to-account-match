@@ -3,7 +3,7 @@ This is a simple way to reference the domain in the email address of a lead reco
 
 This project was inspired by <a href="https://www.amazon.com/Lightning-Sales-Ops-Salesforce-Development-ebook/dp/B06XMR93HC">Lightning Sales Ops</a> by Matt Bertuzzi.
 
-<a href="https://githubsfdeploy.herokuapp.com?owner=mmbuckley&repo=lead-to-account-match">
+<a href="https://githubsfdeploy.herokuapp.com?owner=mainsail-partners&repo=lead-to-account-match">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
