@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Match__c</fullName>
+        <description>References Best Matched Account field to determine if there is a match.</description>
+        <externalId>false</externalId>
+        <formula>NOT(ISBLANK( Best_Matched_Account__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Match</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Best_Matched_Account_Owner_ID__c</fullName>
+        <description>The OwnerID of the best matched account</description>
+        <externalId>false</externalId>
+        <formula>Best_Matched_Account__r.OwnerId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Best Matched Account Owner ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Best_Matched_Account_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The best matched account owner, populated by a Process Build based on the Matched Account Owner ID field.</description>
+        <externalId>false</externalId>
+        <label>Best Matched Account Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Best_Matched_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Account match based on email domain</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account match based on email domain</inlineHelpText>
+        <label>Best Matched Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads (Best Matched Account)</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Free_Email_Domain__c</fullName>
+        <description>True if a domain is believed to be from a free email provider to suppress from Lead-to-Account matching automation.</description>
+        <externalId>false</externalId>
+        <formula>IF( 
+Contains (Email, "gmail")|| 
+Contains (Email, "google")|| 
+Contains (Email, "googlemail")||
+Contains (Email, "yahoo")|| 
+Contains (Email, "yahoo.co.uk")||
+Contains (Email, "hotmail")|| 
+Contains (Email, "hotmail.co.uk")|| 
+Contains (Email, "aol") || 
+Contains (Email, "comcast.net") || 
+Contains (Email, "bellsouth") || 
+Contains (Email, "verizon") || 
+Contains (Email, "msn") || 
+Contains (Email, "mac.com") ||
+Contains (Email, "me.com") || 
+Contains (Email, "mail.com") || 
+Contains (Email, "rollins") || 
+Contains (Email, "att.net") || 
+Contains (Email, "cox") || 
+Contains (Email, "live.com") || 
+Contains (Email, "scbglobal") || 
+Contains (Email, "earthlink") || 
+Contains (Email, "icloud") || 
+Contains (Email, "optonline") || 
+Contains (Email, "ymail") || 
+Contains (Email, "charter") || 
+Contains (Email, "gmx.com") || 
+Contains (Email, "outlook"), 
+TRUE,FALSE 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Free Email Domain</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Matched_Account_Type__c</fullName>
+        <description>The Type of the Best Matched Account</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Best_Matched_Account__r.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Matched Account Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>
