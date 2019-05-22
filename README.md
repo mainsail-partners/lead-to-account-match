@@ -3,6 +3,11 @@ This is a simple way to reference the domain in the email address of a lead reco
 
 This project was inspired by <a href="https://www.amazon.com/Lightning-Sales-Ops-Salesforce-Development-ebook/dp/B06XMR93HC">Lightning Sales Ops</a> by Matt Bertuzzi.
 
+<a href="https://githubsfdeploy.herokuapp.com?owner=mmbuckley&repo=lead-to-account-match">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
+</a>
+
 <h2>Use Case</h2>
 <p>When a sales team is using both the Leads and Contact & Account objects, in particular when BDR teams are working both inbound and outbound leads, conflict can emerge if a clear connection doesn't exist between a lead that came inbound and an account that the sales team has been prospecting outbound.</p> 
 
