@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Lead to Account Match</label>
+    <userlicense>Salesforce</userlicense>
+    <description>Gives users access lead fields for matching best fit accounts.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Account_Match__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Best_Matched_Account_Owner_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Best_Matched_Account_Owner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Best_Matched_Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Free_Email_Domain__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Matched_Account_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>
