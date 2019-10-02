@@ -2,8 +2,16 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <fullName>BDR_Signal__c</fullName>
+        <description>Green if an account has not been worked in last 30 days</description>
         <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(Status__c,"Target")||Last_Activity_Date__c + 30 < TODAY(),IMAGE("/logos/Standard/task/logo.svg","Green Light",15,15),IMAGE("/logos/Custom/Triangle_Red/logo.png","Red Light",15,15))</formula>
+        <formula>IF( 
+    ISPICKVAL(Status__c,&quot;Target&quot;) 
+    || 
+    Last_Activity_Date__c + 30 &lt; TODAY(), 
+    IMAGE(&quot;/logos/Standard/task/logo.svg&quot;,&quot;Green Light&quot;,15,15), 
+    IMAGE(&quot;/logos/Custom/Triangle_Red/logo.png&quot;,&quot;Red Light&quot;,15,15) 
+    )</formula>
+        <inlineHelpText>Green if an account has not been worked in last 30 days</inlineHelpText>
         <label>BDR Signal</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
