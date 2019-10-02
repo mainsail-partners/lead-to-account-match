@@ -58,7 +58,7 @@
             <label>Lead has Best Matched Account</label>
         </rules>
     </decisions>
-    <interviewLabel>LEAD_Copy_Best_Matched_Account_fields-2_InterviewLabel</interviewLabel>
+    <interviewLabel>LEAD_Copy_Best_Matched_Account_fields-3_InterviewLabel</interviewLabel>
     <label>LEAD: Copy Best Matched Account fields</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -275,7 +275,7 @@
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
-                    <stringValue>Picklist</stringValue>
+                    <stringValue>String</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -287,7 +287,7 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>State/Province Code</stringValue>
+                    <stringValue>State/Province</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -302,9 +302,9 @@
                     <stringValue>Reference</stringValue>
                 </value>
             </processMetadataValues>
-            <field>StateCode</field>
+            <field>State</field>
             <value>
-                <elementReference>myVariable_current.Best_Matched_Account__r.BillingStateCode</elementReference>
+                <elementReference>myVariable_current.Best_Matched_Account__r.BillingState</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
