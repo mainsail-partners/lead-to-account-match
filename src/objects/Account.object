@@ -10,7 +10,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <
     <fields>
         <fullName>Company_Domain__c</fullName>
         <description>The domain of the account.</description>
