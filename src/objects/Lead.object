@@ -51,6 +51,16 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>BDR_Signal__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Best_Matched_Account__c),null,Best_Matched_Account__r.BDR_Signal__c)</formula>
+        <label>BDR Signal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Free_Email_Domain__c</fullName>
         <description>True if a domain is believed to be from a free email provider to suppress from Lead-to-Account matching automation.</description>
         <externalId>false</externalId>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>BDR_Signal__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Best_Matched_Account__c),null,Best_Matched_Account__r.BDR_Signal__c)</formula>
+        <label>BDR Signal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Domain__c</fullName>
+        <description>The domain of the account.</description>
+        <externalId>false</externalId>
+        <formula>IF ( 
+    Contains(Website,&quot;www.&quot;), 
+    MID(Website,FIND(&quot;www.&quot;,Website,1)+4, (LEN(Website) - 
+    FIND(&quot;www.&quot;,Website,1)+4)), 
+    Substitute( 
+    Website,LEFT(Website,FIND(&quot;http://&quot;,Website)+6), 
+    NULL) 
+    )</formula>
+        <inlineHelpText>The domain of the account.</inlineHelpText>
+        <label>Company Domain</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Target: an account with no attempted outreach 
+    Cold: an account that hasn&#39;t responded to outreach 
+    Working: an account where 1+ people are being prospected 
+    Selling: an account with an open opportunity 
+    Win-Back: a sales loss 
+    Customer: a sales win</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Target</fullName>
+                    <default>true</default>
+                    <label>Target</label>
+                </value>
+                <value>
+                    <fullName>Cold</fullName>
+                    <default>false</default>
+                    <label>Cold</label>
+                </value>
+                <value>
+                    <fullName>Working</fullName>
+                    <default>false</default>
+                    <label>Working</label>
+                </value>
+                <value>
+                    <fullName>Selling</fullName>
+                    <default>false</default>
+                    <label>Selling</label>
+                </value>
+                <value>
+                    <fullName>Win-back</fullName>
+                    <default>false</default>
+                    <label>Win-back</label>
+                </value>
+                <value>
+                    <fullName>Customer - Active</fullName>
+                    <default>false</default>
+                    <label>Customer - Active</label>
+                </value>
+                <value>
+                    <fullName>Customer - Churned</fullName>
+                    <default>false</default>
+                    <label>Customer - Churned</label>
+                </value>
+                <value>
+                    <fullName>Evaluation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Evaluation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Active_Accounts_14_days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( TODAY() - LastActivityDate &lt;= 14,1,0)</formula>
+        <label>Active Accounts (14 days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Activity_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>LastActivityDate</formula>
+        <label>Last Activity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+</CustomObject>
