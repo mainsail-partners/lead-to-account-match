@@ -16,5 +16,9 @@
     <members>*</members>
     <name>PermissionSet</name>
   </types>
-  <version>45.0</version>
+  <types>
+    <members>*</members>
+    <name>Profile</names>
+  </types>
+  <version>46.0</version>
 </Package>

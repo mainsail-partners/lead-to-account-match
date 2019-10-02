@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label>Lead to Account Match</label>
-    <userlicense>Salesforce</userlicense>
-    <description>Gives users access lead fields for matching best fit accounts.</description>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Account_Match__c</field>
@@ -63,4 +60,4 @@
         <field>Account.Last_Activity_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
-</PermissionSet>
+</Profile>
