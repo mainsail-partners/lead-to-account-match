@@ -10,6 +10,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <
     <fields>
         <fullName>Company_Domain__c</fullName>
         <description>The domain of the account.</description>
@@ -32,12 +33,6 @@
     <fields>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
-        <inlineHelpText>Target: an account with no attempted outreach 
-    Cold: an account that hasn&#39;t responded to outreach 
-    Working: an account where 1+ people are being prospected 
-    Selling: an account with an open opportunity 
-    Win-Back: a sales loss 
-    Customer: a sales win</inlineHelpText>
         <label>Status</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
