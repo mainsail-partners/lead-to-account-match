@@ -3,11 +3,7 @@
     <fields>
         <fullName>BDR_Signal__c</fullName>
         <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(Status__c,"Target")||
-Last_Activity_Date__c + 30 < TODAY(),
-IMAGE("/logos/Standard/task/logo.svg","Green Light",15,15),
-IMAGE("/logos/Custom/Triangle_Red/logo.png","Red Light",15,15)
-)</formula>
+        <formula>IF(ISPICKVAL(Status__c,"Target")||Last_Activity_Date__c + 30 < TODAY(),IMAGE("/logos/Standard/task/logo.svg","Green Light",15,15),IMAGE("/logos/Custom/Triangle_Red/logo.png","Red Light",15,15))</formula>
         <label>BDR Signal</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -25,7 +21,7 @@ IMAGE("/logos/Custom/Triangle_Red/logo.png","Red Light",15,15)
     Substitute( 
     Website,LEFT(Website,FIND(&quot;http://&quot;,Website)+6), 
     NULL) 
-    )</formula>
+    )   </formula>
         <inlineHelpText>The domain of the account.</inlineHelpText>
         <label>Company Domain</label>
         <required>false</required>

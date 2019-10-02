@@ -61,6 +61,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+    <fullName>Business_Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Phone Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Free_Email_Domain__c</fullName>
         <description>True if a domain is believed to be from a free email provider to suppress from Lead-to-Account matching automation.</description>
         <externalId>false</externalId>
