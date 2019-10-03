@@ -22,17 +22,16 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Best_Matched_Account_Owner__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <description>The best matched account owner, populated by a Process Build based on the Matched Account Owner ID field.</description>
+        <fullName>Best_Matched_Account_Owner_ID__c</fullName>
+        <description>The OwnerID of the best matched account</description>
+        <fullName>Account_Owner__c</fullName>
         <externalId>false</externalId>
-        <label>Best Matched Account Owner</label>
-        <referenceTo>User</referenceTo>
-        <relationshipName>Leads</relationshipName>
+        <formula>Best_Matched_Account__r.OwnerId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Owner ID</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
+        <type>Text</type>
     </fields>
     <fields>
         <fullName>Best_Matched_Account__c</fullName>
