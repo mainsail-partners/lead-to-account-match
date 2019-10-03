@@ -24,7 +24,6 @@
     <fields>
         <fullName>Best_Matched_Account_Owner_ID__c</fullName>
         <description>The OwnerID of the best matched account</description>
-        <fullName>Account Owner ID</fullName>
         <externalId>false</externalId>
         <formula>Best_Matched_Account__r.OwnerId</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
