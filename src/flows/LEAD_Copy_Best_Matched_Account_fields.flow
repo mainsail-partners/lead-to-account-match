@@ -58,8 +58,9 @@
             <label>Lead has Best Matched Account</label>
         </rules>
     </decisions>
-    <interviewLabel>LEAD_Copy_Best_Matched_Account_fields-3_InterviewLabel</interviewLabel>
-    <label>LEAD: Copy Best Matched Account fields</label>
+    <description>When lead is matched to an account, copy key account qualification fields to lead</description>
+    <interviewLabel>LEAD_Copy_Best_Matched_Account_fields-4_InterviewLabel</interviewLabel>
+    <label>Lead: Copy Best Matched Account Fields</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>

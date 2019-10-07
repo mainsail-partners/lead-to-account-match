@@ -39,6 +39,7 @@
     </fields>
     <fields>
         <fullName>Status__c</fullName>
+        <description>The status of where this account is in their buying journey with our organization</description>
         <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
@@ -95,6 +96,7 @@
     </fields>
     <fields>
         <fullName>Active_Accounts_14_days__c</fullName>
+        <description>Set to true if an account has had an activity within the last 14 days</description>
         <externalId>false</externalId>
         <formula>IF( TODAY() - LastActivityDate &lt;= 14,1,0)</formula>
         <label>Active Accounts (14 days)</label>
@@ -107,6 +109,7 @@
     </fields>
     <fields>
         <fullName>Last_Activity_Date__c</fullName>
+        <description>Formula mapping to Last Activity Date system property for use in workflow automation</description>
         <externalId>false</externalId>
         <formula>LastActivityDate</formula>
         <label>Last Activity Date</label>
