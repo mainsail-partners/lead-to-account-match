@@ -41,7 +41,7 @@
         <label>Best Matched Account</label>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Leads (Best Matched Account)</relationshipLabel>
-        <relationshipName>Leads</relationshipName>
+        <relationshipName>MS_Leads</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
